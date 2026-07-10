@@ -9,13 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.vitorcarvalho.api_cursos.modules.entities.CursoEntity;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -43,5 +46,11 @@ public class CursoController {
         @RequestParam(required = false) String category){
         List<CursoEntity> cursos = cursoUseCase.findByFilter(name, category);
         return ResponseEntity.ok().body(cursos);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<CursoEntity> update(@PathVariable UUID id, @RequestBody CursoEntity cursoEntity){
+        CursoEntity cursoAtualizado = this.cursoUseCase.update(id, cursoEntity);
+        return ResponseEntity.ok(cursoAtualizado);
     }
 }

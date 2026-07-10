@@ -11,4 +11,5 @@ import br.com.vitorcarvalho.api_cursos.modules.entities.CursoEntity;
 public interface CursoRepository extends JpaRepository<CursoEntity, UUID>{
     List<CursoEntity> findByName(String name);
     List<CursoEntity> findByCategory(String category);
+    Optional <CursoEntity> findById(UUID id);
 }
