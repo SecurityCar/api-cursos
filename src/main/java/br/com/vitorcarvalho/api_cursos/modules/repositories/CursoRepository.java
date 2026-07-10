@@ -1,5 +1,7 @@
 package br.com.vitorcarvalho.api_cursos.modules.repositories;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -7,6 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import br.com.vitorcarvalho.api_cursos.modules.entities.CursoEntity;
 
 public interface CursoRepository extends JpaRepository<CursoEntity, UUID>{
-    
-    
+    List<CursoEntity> findByName(String name);
+    List<CursoEntity> fintByCategory(String category);
 }
