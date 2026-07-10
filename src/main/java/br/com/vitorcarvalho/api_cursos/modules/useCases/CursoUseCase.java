@@ -16,4 +16,16 @@ public class CursoUseCase {
     public List<CursoEntity> findAll(){
         return this.cursoRepository.findAll();
     }
+
+    public List<CursoEntity> findByFilter(String name, String category){
+        if(name != null){
+            return this.cursoRepository.findByName(name);
+        }
+
+        if(category != null){
+            return this.cursoRepository.findByCategory(category);
+        }
+
+        return this.cursoRepository.findAll();
+    }
 }

@@ -38,9 +38,10 @@ public class CursoController {
         return this.cursoRepository.save(cursoEntity);
     }
 
-    @GetMapping("/")
-    public ResponseEntity<List<CursoEntity>> findAll() {
-        List<CursoEntity> cursos = cursoUseCase.findAll();
+    @GetMapping
+    public ResponseEntity<List<CursoEntity>> listByFilter(@RequestParam(required = false) String name,
+        @RequestParam(required = false) String category){
+        List<CursoEntity> cursos = cursoUseCase.findByFilter(name, category);
         return ResponseEntity.ok().body(cursos);
     }
 }
