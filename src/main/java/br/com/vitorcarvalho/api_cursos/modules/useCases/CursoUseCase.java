@@ -44,4 +44,12 @@ public class CursoUseCase {
         }
         return cursoRepository.save(curso);
     }
+
+    public void delete(UUID id){
+        CursoEntity curso = this.cursoRepository.findById(id).orElseThrow(
+            () -> new ResourceNotFoundException("Curso não encontrado. Verifique o ID")
+        );
+
+        cursoRepository.delete(curso);
+    }
 }

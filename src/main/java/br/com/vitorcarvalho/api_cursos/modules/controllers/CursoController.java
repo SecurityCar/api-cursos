@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -52,5 +53,10 @@ public class CursoController {
     public ResponseEntity<CursoEntity> update(@PathVariable UUID id, @RequestBody CursoEntity cursoEntity){
         CursoEntity cursoAtualizado = this.cursoUseCase.update(id, cursoEntity);
         return ResponseEntity.ok(cursoAtualizado);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable UUID id){
+        cursoUseCase.delete(id);
     }
 }
