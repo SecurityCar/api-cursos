@@ -1,8 +1,8 @@
-###Sistema de Gestão de Cursos
+# Sistema de Gestão de Cursos
 > 🚧 Projeto em Desenvolvimento
 
 Um sistema de gestão de cursos para uma instituição de ensino, com controle de alunos, professores e matrícula.
-![Badge Java](https://img.shields.io/badge/Java-17-orange)
+![Java](https://shields.io)
 ![Badge Spring](https://img.shields.io/badge/Spring%20Boot-3.3-green)
 ![Badge PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
 
