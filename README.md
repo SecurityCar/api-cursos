@@ -1,4 +1,4 @@
-#Sistema de Gestão de Cursos
+###Sistema de Gestão de Cursos
 > 🚧 Projeto em Desenvolvimento
 
 Um sistema de gestão de cursos para uma instituição de ensino, com controle de alunos, professores e matrícula.
