@@ -2,19 +2,18 @@
 > 🚧 Projeto em Desenvolvimento
 
 Um sistema de gestão de cursos para uma instituição de ensino, com controle de alunos, professores e matrícula.
-![Java](https://shields.io)
-![Badge Spring](https://img.shields.io/badge/Spring%20Boot-3.3-green)
-![Badge PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
 
-## ⏳ Status do projeto
-[x] CRUD de cursos
-[o] CRUD de alunos
-[] Autenticação e Autorização
+![Tecnologias](https://skillicons.dev/icons?i=java,docker,spring,postgresql)
 
 ## 📌 Funcionalidades
-- Cadastro, listagem, edição e exclusão de cursos (finalizado)
-- Gerenciamento de alunos e matrículas (em andamento)
-- Autentificação e Autorização
+- Cadastro, listagem, edição e exclusão de cursos e alunos
+- Gerenciamento matrículas
+- Autenticação e Autorização
+  
+## ⏳ Status do projeto
+- [x] CRUD de cursos
+- [ ] CRUD de alunos
+- [ ] Autenticação e Autorização
 
 ## 🛠 Tecnologias
 
